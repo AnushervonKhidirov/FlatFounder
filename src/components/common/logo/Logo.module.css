@@ -1,6 +1,8 @@
 .logo {
     display: inline-block;
     font-size: 30px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
     margin: 10px;
     padding: .2em;
     cursor: pointer;
