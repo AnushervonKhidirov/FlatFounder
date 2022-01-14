@@ -59,6 +59,7 @@
       "border-width",
       "border-color",
       "border-radius",
+      "outline",
       "overflow",
       "list-style-type",
       "margin",

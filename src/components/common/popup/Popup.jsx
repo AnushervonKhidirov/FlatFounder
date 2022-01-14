@@ -1,16 +1,20 @@
 import React from 'react';
 import { CloseBtnIcon } from '../../../assets/Icons';
-import { useDispatch } from 'react-redux';
-import { close } from '../../../app/popup';
+import { useDispatch, useSelector } from 'react-redux';
+import { closePopup } from '../../../app/popup';
+import Form from '../form/Form';
+import Headline from '../headline/Headline';
 import './popup.css';
 
-export default function Popup(props) {
+export default function Popup({ clName }) {
+    const formName = useSelector(state => state.formContainer)
     const dispatch = useDispatch();
 
-    return <div className={`popup ${props.clName}`} onClick={() => dispatch(close())}>
+    return <div className={`popup ${clName}`} onClick={() => dispatch(closePopup())}>
         <div className={'popup_frame'} onClick={(e) => e.stopPropagation()}>
-            <CloseBtnIcon closeFn={() => dispatch(close())} color='#000' />
-            {props.children}
+            <CloseBtnIcon closeFn={() => dispatch(closePopup())} color='#000' />
+            <Headline title={formName.name} />
+            <Form />
         </div>
     </div>
 }

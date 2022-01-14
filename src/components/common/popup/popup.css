@@ -2,22 +2,24 @@
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0);
-    display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(0, 0, 0, 0);
     transition: all .3s;
 }
 
 .popup_frame {
     width: 500px;
-    height: 400px;
     background: #fff;
     border-radius: .5em;
-    transform: scale(.5);
+    overflow: hidden;
+    padding: 1em 2em 3em 2em;
+    box-sizing: border-box;
     opacity: 0;
+    transform: scale(.5);
     transition: all .3s;
 }
 
@@ -30,13 +32,13 @@
 }
 
 .popup.entered .popup_frame {
-    transform: scale(1);
     opacity: 1;
+    transform: scale(1);
 }
 
 .popup.exiting .popup_frame {
-    transform: scale(.5);
     opacity: 0;
+    transform: scale(.5);
 }
 
 .popup.exited {

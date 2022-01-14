@@ -1,9 +1,11 @@
 .logo {
     display: inline-block;
+    color: #333;
     font-size: 30px;
     font-family: 'Ubuntu';
     font-weight: 500;
-    margin: 10px;
+    text-decoration: none;
+    margin: .3em;
     padding: .2em;
     cursor: pointer;
 }

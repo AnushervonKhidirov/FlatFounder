@@ -1,0 +1,10 @@
+.top_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1em;
+}
+
+.user_menu > button {
+    margin: 0 .2em;
+}

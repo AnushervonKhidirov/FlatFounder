@@ -50,6 +50,7 @@
 
 body {
 	font-family: 'Mulish', sans-serif;
+	user-select: none;
 	margin: 0;
 }
 
