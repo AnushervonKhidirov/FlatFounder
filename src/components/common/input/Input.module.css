@@ -1,10 +1,10 @@
 .input {
     width: 100%;
-    color: #333;
+    color: var(--darkGrey);
     font-size: 1em;
     font-family: inherit;
     border: .1em solid #ccc;
-    border-radius: 0.3em;
+    border-radius: 0.2em;
     outline: none;
     margin-bottom: 0.7em;
     padding: 0.3em 0.5em;
@@ -13,9 +13,9 @@
 }
 
 .input::placeholder {
-    color: #9f9f9f;
+    color: var(--lightGrey);
 }
 
 .input:focus {
-    border-color: #00ab00;
+    border-color: var(--green);
 }

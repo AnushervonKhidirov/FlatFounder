@@ -1,0 +1,19 @@
+.menu_navigation {
+    display: flex;
+    padding: 1em 0;
+}
+
+.navigation_item {
+    font-size: 17px;
+    font-weight: 500;
+    border-bottom: .2em solid transparent;
+    margin: 0 .6em;
+    padding: .2em .5em;
+    transition: all .3s;
+    box-sizing: border-box;
+}
+
+
+.navigation_item:hover {
+    color: var(--green);
+}

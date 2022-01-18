@@ -1,12 +1,15 @@
 import React from 'react';
-import TopHeader from '../../components/headerComponents/topHeader/TopHeader'
-
-import styles from './Header.module.css';
+import TopHeader from '../../components/headerComponents/topHeader/TopHeader';
+import NavigationHeader from '../../components/headerComponents/navigationHeader/NavigationHeader';
+// import './header.css';
 
 function Header() {
     return (
-        <header id={styles.header}>
-            <TopHeader />
+        <header>
+            <div id="header_wrapper">
+                <TopHeader />
+                <NavigationHeader />
+            </div>
         </header>
     );
 }

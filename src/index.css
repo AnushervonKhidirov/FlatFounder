@@ -47,13 +47,44 @@
 	font-display: swap;
 }
 
+:root {
+	--green: #00ab00;
+	--lightGrey: #9f9f9f;
+	--darkGrey: #333333;
+}
 
 body {
+	color: var(--darkGrey);
 	font-family: 'Mulish', sans-serif;
-	user-select: none;
 	margin: 0;
+	user-select: none;
 }
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+sup {
+    font-size: 0.5em;
+}
+
+
+main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 0 1em rgba(0, 0, 0, .3);
+}
+
+#header_wrapper {
+    max-width: 1200px;
+    margin: auto;
 }

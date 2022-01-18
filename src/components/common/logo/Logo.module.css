@@ -1,10 +1,9 @@
 .logo {
     display: inline-block;
-    color: #333;
+    color: var(--darkGrey);
     font-size: 30px;
     font-family: 'Ubuntu';
     font-weight: 500;
-    text-decoration: none;
     margin: .3em;
     padding: .2em;
     cursor: pointer;
@@ -12,7 +11,7 @@
 
 .logo span {
     display: inline-block;
-    background: #00ab00;
+    background: var(--green);
     color: #fff;
     border-radius: 0.2em;
     padding: 0.15em;

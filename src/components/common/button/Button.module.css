@@ -1,5 +1,5 @@
 .button {
-    background: #00ab00;
+    background: var(--green);
     color: #fff;
     font-size: 1em;
     font-family: inherit;
@@ -12,7 +12,7 @@
 }
 
 .button:hover {
-    box-shadow: 0 0 0.7em rgba(0, 0, 0, 0.7);;
+    box-shadow: 0 0 0.7em rgba(0, 0, 0, 0.5);;
 }
 
 .button:active {
