@@ -4,15 +4,22 @@
     font-size: 30px;
     font-family: 'Ubuntu';
     font-weight: 500;
+    white-space: nowrap;
     margin: .3em;
     padding: .2em;
     cursor: pointer;
+    transition: color .3s;
 }
 
 .logo span {
     display: inline-block;
-    background: var(--green);
+    background: var(--main);
     color: #fff;
     border-radius: 0.2em;
+    margin-right: 0.1em;
     padding: 0.15em;
+}
+
+.logo:hover {
+    color: var(--main);
 }

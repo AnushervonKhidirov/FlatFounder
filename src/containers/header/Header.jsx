@@ -1,7 +1,6 @@
 import React from 'react';
 import TopHeader from '../../components/headerComponents/topHeader/TopHeader';
 import NavigationHeader from '../../components/headerComponents/navigationHeader/NavigationHeader';
-// import './header.css';
 
 function Header() {
     return (

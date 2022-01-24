@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Transition } from 'react-transition-group';
 
@@ -10,9 +10,18 @@ import MainContent from './containers/mainContent/MainContent';
 function App() {
 	const popup = useSelector((state) => state.popupHandler);
 
+	useEffect(() => {
+		setBodyScrolling();
+	});
+	
+
+	function setBodyScrolling() {
+		popup.value ? document.body.classList.add('scroll_disabled') : document.body.classList.remove('scroll_disabled');
+	}
+
 	return (
 		<div id='wrapper'>
-			<Transition in={popup.value} timeout={300} mountOnEnter unmountOnExit>
+			<Transition in={popup.value} timeout={{appear: 300, enter: 0, exit: 300}} mountOnEnter unmountOnExit>
 				{animationClass => <Popup clName={animationClass} />}
 			</Transition>
 

@@ -22,8 +22,13 @@ export const formSlice = createSlice({
             signUp: [
                 {
                     type: 'text',
-                    placeholder: 'Ф.И.О',
-                    name: 'userName'
+                    placeholder: 'Имя',
+                    name: 'name'
+                },
+                {
+                    type: 'text',
+                    placeholder: 'Фамилия',
+                    name: 'surname'
                 },
                 {
                     type: 'text',

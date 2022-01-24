@@ -17,5 +17,5 @@
 }
 
 .input:focus {
-    border-color: var(--green);
+    border-color: var(--main);
 }
