@@ -15,12 +15,24 @@
 }
 
 
-.navigation_item:hover {
+/* active link */
+.buy_hover a.navigation_item[data-title="buy"] {
+    color: var(--main);
+}
+
+.rent_hover a.navigation_item[data-title="rent"] {
+    color: var(--main);
+}
+
+.daily_rent_hover a.navigation_item[data-title="daily_rent"] {
+    color: var(--main);
+}
+
+.mortgage_hover a.navigation_item[data-title="mortgage"] {
     color: var(--main);
 }
 
 
-/* active link */
 .buy a.navigation_item[data-title="buy"] {
     color: var(--main);
     border-color: var(--main);

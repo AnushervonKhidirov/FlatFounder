@@ -11,15 +11,18 @@ import { ApartmentIcon, RoomIcon, HouseIcon, CommercialIcon, PlotIcon } from '..
 import styles from './NavigationHeader.module.css';
 
 function NavigationHeader() {
-    const [param, setParam] = useSearchParams();
+    const [param] = useSearchParams();
     const [subMenuItems, setSubMenuItems] = useState([]);
     const [isActive, setIsActive] = useState(false);
     const [activeNavLink, setActiveNavLink] = useState();
+    const [hoverNavLink, setHoverNavLink] = useState('');
 
-    
     useEffect(() => {
-        setActiveNavLink(styles[param.get('action')]);
-    }, [param])
+        let active = styles[param.get('action')] || '';
+        let hover = styles[hoverNavLink] && isActive ? styles[hoverNavLink] : '';
+
+        setActiveNavLink(`${active} ${hover}`);
+    }, [param, hoverNavLink, isActive]);
 
     const navigation = [
         {
@@ -122,6 +125,7 @@ function NavigationHeader() {
         subMenu.forEach(elem => elem.parentLink = parentKey);
         setSubMenuItems(subMenu);
         setIsActive(true);
+        setHoverNavLink(parentKey + '_hover');
     }
 
     function generateLink({ action, search }) {
@@ -130,7 +134,7 @@ function NavigationHeader() {
 
     return (
         <nav className={styles.menu_navigation}>
-            <div className={`${styles.menu} ${activeNavLink}`}>
+            <div className={activeNavLink}>
                 {navigation.map(navItem => {
                     return <NavLink
                         to={generateLink({ action: navItem.key })}
