@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { signIn } from '../../../app/signIn';
+import { closePopup } from '../../../app/popup';
 import Input from '../input/Input';
 import Button from '../button/Button';
 import styles from './Form.module.css';
@@ -7,6 +9,7 @@ import styles from './Form.module.css';
 function Form() {
     const formContainer = useSelector((state) => state.formContainer);
     const [formData, setFormData] = useState({})
+    const dispatch = useDispatch();
 
     function readData(e) {
         const newData = Object.assign({}, formData);
@@ -19,8 +22,11 @@ function Form() {
 
         if (formContainer.type === 'signUp' && formData.password !== formData.repeatPassword) {
             alert('Пароли должны совпадать!');
+            
         } else {
             console.log(JSON.stringify(formData));
+            dispatch(signIn());
+            dispatch(closePopup());
         }
     }
 
