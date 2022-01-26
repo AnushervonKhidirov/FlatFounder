@@ -49,12 +49,12 @@ export const formSlice = createSlice({
         }
     },
     reducers: {
-        signInType: (state) => {
+        signInForm: (state) => {
             state.name = 'Вход';
             state.type = 'signIn';
             state.currentStructure = state.structures.signIn;
         },
-        signUpType: (state) => {
+        signUpForm: (state) => {
             state.name = 'Регистрация';
             state.type = 'signUp';
             state.currentStructure = state.structures.signUp;
@@ -62,5 +62,5 @@ export const formSlice = createSlice({
     }
 });
 
-export const { signInType, signUpType } = formSlice.actions;
+export const { signInForm, signUpForm } = formSlice.actions;
 export default formSlice.reducer;
