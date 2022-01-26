@@ -1,7 +1,10 @@
-import React from 'react';
-import { Routes, Route, useSearchParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Routes, Route, useSearchParams, useLocation } from 'react-router-dom';
+
 import Home from '../../pages/home/Home';
 import Offers from '../../pages/offers/Offers';
+import AddOffer from '../../pages/addOffer/AddOffer';
+
 import styles from './MainContent.module.css';
 
 // images
@@ -13,13 +16,21 @@ import plot from '../../assets/images/plot.jpg';
 import room from '../../assets/images/room.jpg';
 
 function MainContent() {
+    const { pathname } = useLocation();
+    const [showSlide, setShowSlide] = useState(false);
+
+    useEffect(() =>{
+        setShowSlide(pathname.replace(/\//g, '') === '' || pathname.replace(/\//g, '') === 'offers');
+    }, [showSlide, pathname]);
+
     return (
         <main>
-            <MainContentSlide />
+            {!showSlide || <MainContentSlide />}
             <div id="main_wrapper">
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/offers' element={<Offers />} />
+                    <Route path='/add_offer' element={<AddOffer />} />
                 </Routes>
             </div>
         </main>

@@ -24,7 +24,8 @@
 	font-size: 2em;
 	border-radius: .25em;
 	padding: .5em 1em;
-	box-shadow: 0 0 .1em .1em rgba(0, 0, 0, .3);
+	/* box-shadow: 0 0 .1em .1em rgba(0, 0, 0, .3); */
+	box-shadow: -.15em .15em .2em rgba(0, 0, 0, .3);
 	backdrop-filter: blur(20px);
 	z-index: 9;
 }
