@@ -8,8 +8,8 @@ import styles from './Form.module.css';
 
 function Form() {
     const formContainer = useSelector((state) => state.formContainer);
-    const [formData, setFormData] = useState({})
     const dispatch = useDispatch();
+    const [formData, setFormData] = useState({})
 
     function readData(e) {
         const newData = Object.assign({}, formData);
@@ -33,7 +33,8 @@ function Form() {
     return (
         <form className={styles.form} onSubmit={(e) => submitForm(e)}>
             {formContainer.currentStructure.map(item => {
-                return <Input onChange={(e) => readData(e)}
+                return <Input
+                    onBlur={(e) => readData(e)}
                     type={item.type}
                     placeholder={item.placeholder}
                     name={item.name}

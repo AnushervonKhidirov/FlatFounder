@@ -54,8 +54,8 @@ function UnauthorizedUserMenu() {
     }
 
     return <>
-        <Button title={'Вход'} fSize='17px' func={(signInHandler)} />
-        <Button title={'Регистрация'} fSize='17px' func={(signUpHandler)} />
+        <Button title={'Вход'} style={{fontSize: '17px'}} func={(signInHandler)} />
+        <Button title={'Регистрация'} style={{fontSize: '17px'}} func={(signUpHandler)} />
     </>
 }
 

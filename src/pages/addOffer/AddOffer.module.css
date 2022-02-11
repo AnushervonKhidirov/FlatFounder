@@ -31,7 +31,7 @@
 }
 
 .label_list.active_label_list .label {
-    background: #e1e1e1;
+    background: var(--disabled);
 }
 
 .label_list .label.active_label {

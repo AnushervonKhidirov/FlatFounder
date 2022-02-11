@@ -48,15 +48,8 @@
 }
 
 :root {
-	/* --main: #00b1bf;
-	--main: #cd0062;
-	--main: #6a51c2;
-	--main: #4aa537;
-	--main: #a95858;
-	--main: #333333;
-	--main: #764abc;
-	--main: #00ab00; */
 	--main: #5bbbba;
+	--disabled: #e1e1e1;
 	--lightGrey: #9f9f9f;
 	--darkGrey: #333333;
 }
@@ -71,10 +64,6 @@ body {
 
 body.scroll_disabled {
 	overflow: hidden;
-}
-
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 header {
@@ -111,4 +100,29 @@ sup {
 svg {
 	width: 100%;
 	height: 100%;
+}
+
+input,
+textarea {
+	width: 100%;
+	color: var(--darkGrey);
+	font-size: 1em;
+	font-family: inherit;
+	border: .1em solid #ccc;
+	border-radius: 0.2em;
+	outline: none;
+	padding: 0.3em 0.5em;
+	box-sizing: border-box;
+	transition: border .3s;
+	resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: var(--lightGrey);
+}
+
+input:focus,
+textarea:focus {
+	border-color: var(--main);
 }

@@ -10,11 +10,8 @@ import MainContent from './containers/mainContent/MainContent';
 function App() {
 	const popup = useSelector((state) => state.popupHandler);
 
-	useEffect(() => {
-		setBodyScrolling();
-	});
+	useEffect(() => setBodyScrolling());
 	
-
 	function setBodyScrolling() {
 		popup.value ? document.body.classList.add('scroll_disabled') : document.body.classList.remove('scroll_disabled');
 	}

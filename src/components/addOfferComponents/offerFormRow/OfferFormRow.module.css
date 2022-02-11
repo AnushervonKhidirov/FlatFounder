@@ -1,0 +1,42 @@
+.form_row {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: 170px 1fr;
+    margin: 1em 0;
+}
+
+.form_row_value {
+    display: flex;
+    gap: .7em;
+    flex-wrap: wrap;
+}
+
+.form_label {
+    display: flex;
+    min-width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 0 .7em;
+    box-sizing: border-box;
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .3);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.form_label:hover {
+    box-shadow: -0.3em 0.3em .75em rgb(0 0 0 / 30%);
+    transform: translate(0.15em, -0.15em);
+}
+
+.form_row.chosen .form_label {
+    background: var(--disabled);
+}
+
+.form_row.chosen .form_label.active {
+    background: var(--main);
+    color: #fff;
+}

@@ -1,0 +1,9 @@
+.input_place {
+    display: flex;
+    margin-bottom: 1em;
+    gap: 1em;
+}
+
+.apartment_number {
+    width: 150px;
+}
